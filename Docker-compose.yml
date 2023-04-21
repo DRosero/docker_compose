@@ -12,3 +12,5 @@ services:
       MYVARIABLE: esto es una variable de prueba
     ports:
       - 8080:80
+    volumes:
+      - ./html/:/usr/share/nginx/html
