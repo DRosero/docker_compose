@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        MIARGUMENTO: "Soy un argumento desde docker compose"
     container_name: nginx_service
     restart: always
     environment:

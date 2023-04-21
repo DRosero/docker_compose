@@ -1,0 +1,9 @@
+docker compose up
+ejecuta el archivo docker-compose.yml y lanza el contenedor con las instrucciones indicadas, se puede hacer una llamada a Dockerfile dentro del mismo archivo yml
+
+docker compose down
+detiene y borra el contenedor, no borra la imagen
+
+docker compose up -d --build
+-d: ejecuta las instrucciones en segundo plano
+--build: obliga a ejecutar el Dockerfile nuevamente en caso de que haya cambios

@@ -1,2 +1,3 @@
 FROM nginx:latest
-RUN echo "si funciono que bonito"
+ARG MIARGUMENTO="un argumento desde Dockerfile"
+RUN echo "Hola soy ${MIARGUMENTO}"
