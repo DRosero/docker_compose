@@ -7,3 +7,6 @@ detiene y borra el contenedor, no borra la imagen
 docker compose up -d --build
 -d: ejecuta las instrucciones en segundo plano
 --build: obliga a ejecutar el Dockerfile nuevamente en caso de que haya cambios
+
+docker compose logs -f
+muestra el log del contenedor que se esta ejecutando

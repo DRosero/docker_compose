@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
       args:
         MIARGUMENTO: "Soy un argumento desde docker compose"
+    command: ["echo", "este es un mensaje desde docker compose"]
     container_name: nginx_service
     restart: always
     environment:
@@ -14,3 +15,6 @@ services:
       - 8080:80
     volumes:
       - ./html/:/usr/share/nginx/html
+
+volumes:
+  hmtl: {}
