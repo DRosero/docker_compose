@@ -11,6 +11,42 @@ docker compose up -d --build
 docker compose logs -f
 muestra el log del contenedor que se esta ejecutando
 
+docker compose ps
+lista los contenedores
+
+docker compose start
+inicia los contenedores que estan detenidos
+
+docker compose start "nombre del servicio"
+inicia el/los contenedores del servicio
+
+docker compose stop
+detiene los contenedores
+
+docker compose stop "nombre del servicio"
+detiene el/los contenedores del servicio
+
+docker compose build
+reconstuye las imagenes de los servicios
+
+docker compose kill
+detiene los contenedores con el codigo 137
+
+docker compose rm
+borra los contenedores que se encuentran detenidos
+
+docker compose pause
+coloca a los contenedores en estado pausado
+
+docker compose unpause
+vuele a los contenedores del estado pausado a ejecucion
+
+docker compose restart
+revisa el archivo de docker-compose.yml y los reinicializa
+
+docker compose config
+muestra el estado del archivo docker-compose.yml, si no hay errores muestra el contenido del archivo, caso contrario muestra el error
+
 docker network ls
 muestra las redes que se encuentran creadas
 bridge: puente de comunicacion entre contenedores
