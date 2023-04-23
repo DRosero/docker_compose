@@ -10,3 +10,13 @@ docker compose up -d --build
 
 docker compose logs -f
 muestra el log del contenedor que se esta ejecutando
+
+docker network ls
+muestra las redes que se encuentran creadas
+bridge: puente de comunicacion entre contenedores
+host: se usa para trabajar con la ip de la maquina
+none: para que los contenedores no esten conectados a ninguna red
+
+docker network inspect "id de la red"
+muestra el contenido de la red que se indique como parámetro
+

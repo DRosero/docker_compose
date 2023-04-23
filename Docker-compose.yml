@@ -6,15 +6,45 @@ services:
       dockerfile: Dockerfile
       args:
         MIARGUMENTO: "Soy un argumento desde docker compose"
-    command: ["echo", "este es un mensaje desde docker compose"]
     container_name: nginx_service
     restart: always
     environment:
-      MYVARIABLE: esto es una variable de prueba
+      MYVARIABLE: "esto es una variable de prueba"
     ports:
       - 8080:80
     volumes:
       - ./html/:/usr/share/nginx/html
+    networks:
+      nginx_network:
+        aliases:
+          - nginx_host
+
+  nginx2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MIARGUMENTO: "Soy un argumento desde docker compose2"
+    container_name: nginx_service2
+    restart: always
+    environment:
+      MYVARIABLE: "esto es una variable de prueba2"
+    ports:
+      - 8180:80
+    volumes:
+      - ./html2/:/usr/share/nginx/html
+    networks:
+      nginx_network:
+        aliases:
+          - nginx_host2
 
 volumes:
   hmtl: {}
+  html2: {}
+
+networks:
+  nginx_network:
+    name: nginx_red
+    driver: bridge
+    ipam:
+      driver: default
